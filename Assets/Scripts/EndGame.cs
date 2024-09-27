@@ -5,13 +5,13 @@ using UnityEngine.Events;
 
 public class EndGame : MonoBehaviour
 {
-    [SerializeField][Tooltip("The button that allows you to exit the game")] private Button _exiMenutButton;
-    [SerializeField][Tooltip("The button that enables the transition to another scene")] private Button _nextLevelButton;
-    [SerializeField][Tooltip("The index of the scene to go to when you click on the button")] private int _sceneIndex;
+    [SerializeField][Tooltip("The button that allows you to exit the game")] private Button _exiMenutButton;                //_exiMenutButton: позволяет выйти из игры (или вернуться в главное меню)
+    [SerializeField][Tooltip("The button that enables the transition to another scene")] private Button _nextLevelButton;   //_nextLevelButton: позволяет перейти на следующий уровень (другую сцену)
+    [SerializeField][Tooltip("The index of the scene to go to when you click on the button")] private int _sceneIndex;      
 
     private void Awake()
     {
-        if (_nextLevelButton == null)
+        if (_nextLevelButton == null)                                   //проверяется правильность указания индекса сцены, чтобы предотвратить ошибки
         {
             if (!TryGetComponent(out _nextLevelButton))
             {
@@ -36,10 +36,8 @@ public class EndGame : MonoBehaviour
     }
 
     public GameManager gameManager;
-    private void OnTriggerEnter()
+    private void OnTriggerEnter()   //завершает уровень при взаимодействии с триггером
     {
         gameManager.CompleteLevel();
     }
-
-
 }

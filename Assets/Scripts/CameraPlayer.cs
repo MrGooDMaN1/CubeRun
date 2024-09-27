@@ -10,5 +10,6 @@ public class CameraPlayer : MonoBehaviour
     void Update()
     {
         transform.position = _player.position + offset;
+        //Камера перемещается вслед за игроком, сохраняя фиксированное смещение, заданное вектором offset
     }
 }
