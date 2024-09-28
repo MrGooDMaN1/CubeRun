@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject _player;
     [SerializeField] private float _rayDistance;
     private bool _onHit;
-    private bool _onHitLong;
+    //private bool _onHitLong;
     private float _timeLeft = 3.0f;
 
     private void Awake()
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         RayOnHit();
 
-        if (!_onHit && !_onHitLong)
+        if (!_onHit)// && !_onHitLong)
         {
             _timeLeft -= Time.deltaTime;
             if (_timeLeft < 0)
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         Ray ray = new Ray(transform.position, -transform.up);
         Debug.DrawRay(transform.position, -transform.up * _rayDistance, Color.blue);
         _onHit = Physics.Raycast(ray, _rayDistance);
-        _onHitLong = Physics.Raycast(ray, _jumpHeight);
+        //_onHitLong = Physics.Raycast(ray, _jumpHeight);
     }
 
     private void Jump()
@@ -55,9 +55,9 @@ public class PlayerController : MonoBehaviour
 
     private void Move(float HorizontalMovement)
     {
-        if (_onHit && !_onHitLong)
+        if (_onHit)// && !_onHitLong)
         {
-            int sign = Screen.width / 2 > HorizontalMovement ? -1 : 1;
+            int sign = Screen.height / 2 > HorizontalMovement ? -1 : 1;
             _rigidbody.MovePosition(_rigidbody.position + Vector3.right * sign * _speed * Time.fixedDeltaTime);
         }
     }
