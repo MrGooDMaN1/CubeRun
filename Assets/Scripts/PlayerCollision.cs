@@ -17,18 +17,24 @@ public class PlayerCollision : MonoBehaviour
         {
             Debug.Log(collision.collider.name);
             movement.enabled = false;
+            _timeLeft += 1.0f;
+            RestartAfterTime();
         }
     }
 
     private void Update()
     {
-        if(!movement.enabled && !completeLevelUI)
+        RestartAfterTime();
+    }
+
+    private void RestartAfterTime()
+    {
+        if (!movement.enabled && !completeLevelUI)
         {
             _timeLeft -= Time.deltaTime;
 
-           if (_timeLeft < 0)
+            if (_timeLeft < 0)
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
         }
-
     }
 }
