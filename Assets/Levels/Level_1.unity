@@ -2734,7 +2734,7 @@ PrefabInstance:
     - target: {fileID: 6392803374300233789, guid: ff7a2b0e6a91dc743afb8c080daca4aa, type: 3}
       propertyPath: completeLevelUI
       value: 
-      objectReference: {fileID: 2086587403}
+      objectReference: {fileID: 1480898364}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
