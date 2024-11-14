@@ -381,7 +381,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6392803374300233789, guid: ff7a2b0e6a91dc743afb8c080daca4aa, type: 3}
   m_PrefabInstance: {fileID: 6392803374648633374}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1119498334}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7405c71e3c1b9d49872ff798316e805, type: 3}
@@ -1036,6 +1036,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1525617513}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1119498334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6392803374300233788, guid: ff7a2b0e6a91dc743afb8c080daca4aa, type: 3}
+  m_PrefabInstance: {fileID: 6392803374648633374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1119498336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119498334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ef90523bc38ec4c819efba0cbe4b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1126069293
 GameObject:
   m_ObjectHideFlags: 0
@@ -2732,13 +2749,20 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 6392803374300233789, guid: ff7a2b0e6a91dc743afb8c080daca4aa, type: 3}
+      propertyPath: gamePause
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392803374300233789, guid: ff7a2b0e6a91dc743afb8c080daca4aa, type: 3}
       propertyPath: completeLevelUI
       value: 
       objectReference: {fileID: 1480898364}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6392803374300233788, guid: ff7a2b0e6a91dc743afb8c080daca4aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1119498336}
   m_SourcePrefab: {fileID: 100100000, guid: ff7a2b0e6a91dc743afb8c080daca4aa, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

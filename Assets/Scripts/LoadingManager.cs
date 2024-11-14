@@ -22,7 +22,7 @@ public class LoadingManager : MonoBehaviour
 
     private void Start()
     {
-            _animator.SetTrigger("OpenScene");
+        _animator.SetTrigger("OpenScene");
     }
 
     public void ExitGame()

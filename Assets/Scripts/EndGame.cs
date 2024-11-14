@@ -38,6 +38,7 @@ public class EndGame : MonoBehaviour
     public GameManager gameManager;
     private void OnTriggerEnter()   //завершает уровень при взаимодействии с триггером
     {
+        
         gameManager.CompleteLevel();
     }
 }
