@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Time.timeScale == 0)
+            return;
+
         RayOnHit();
         if (_rigidbody == null)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
@@ -57,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         if (_onHit && _rigidbody != null)
         {
-            int sign = Screen.height / 2 > HorizontalMovement ? -1 : 1;
+            int sign = Screen.width / 2 > HorizontalMovement ? -1 : 1;
             _rigidbody.MovePosition(_rigidbody.position + Vector3.right * sign * _speed * Time.fixedDeltaTime);
         }
     }
