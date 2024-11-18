@@ -7,7 +7,9 @@ public class EndGame : MonoBehaviour
 {
     [SerializeField][Tooltip("The button that allows you to exit the game")] private Button _exiMenutButton;                //_exiMenutButton: позволяет выйти из игры (или вернуться в главное меню)
     [SerializeField][Tooltip("The button that enables the transition to another scene")] private Button _nextLevelButton;   //_nextLevelButton: позволяет перейти на следующий уровень (другую сцену)
-    [SerializeField][Tooltip("The index of the scene to go to when you click on the button")] private int _sceneIndex;      
+    [SerializeField][Tooltip("The index of the scene to go to when you click on the button")] private int _sceneIndex;
+
+    public GameManager gameManager;
 
     private void Awake()
     {
@@ -35,10 +37,8 @@ public class EndGame : MonoBehaviour
 
     }
 
-    public GameManager gameManager;
     private void OnTriggerEnter()   //завершает уровень при взаимодействии с триггером
     {
-        
         gameManager.CompleteLevel();
     }
 }

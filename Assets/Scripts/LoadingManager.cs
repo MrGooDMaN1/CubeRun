@@ -34,6 +34,8 @@ public class LoadingManager : MonoBehaviour
 
     public void LoadScene(int sceneIndex)
     {
+        Time.timeScale = 1;
+
         _animator.SetTrigger("CloseScene");
 
         StartCoroutine(ClosingAnimationEnd(sceneIndex));
